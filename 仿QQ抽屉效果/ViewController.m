@@ -60,6 +60,12 @@
     UIPanGestureRecognizer * backPan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(backPan:)];
     
     [button addGestureRecognizer:backPan];
+    
+    // 设置阴影效果
+    self.tabBarController.view.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.tabBarController.view.layer.shadowOffset = CGSizeMake(-5, 0);
+    self.tabBarController.view.layer.shadowOpacity = 0.7;
+    self.tabBarController.view.layer.shadowRadius = 5;
 }
 
 
